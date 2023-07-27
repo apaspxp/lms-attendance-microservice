@@ -18,7 +18,7 @@ spec:
         app: lms-attendance-service
     spec:
       containers:
-        - image: isarthak/lms-attendance-service:latest
+        - image: apaspxp/lms-attendance-service:latest
           name: lms-attendance-service
           resources: {}
 status: {}
