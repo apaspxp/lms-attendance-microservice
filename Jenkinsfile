@@ -14,7 +14,7 @@
                    steps {
                        script {
                        // Use Jenkins credentials to get the MySQL username and password
-                       withCredentials([usernamePassword(credentialsId: 'your-mysql-credentials-id', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
+                       withCredentials([usernamePassword(credentialsId: 'b6e6b90d-21c4-4057-b364-01f059b29056', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
                            // Connect to the MySQL database and perform operations
                            // Replace 'your_database_name', 'your_mysql_host', and 'your_table_name' with actual values
                            def dbName = 'LMSATTENDANCESERVICE'
