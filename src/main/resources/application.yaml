@@ -11,7 +11,7 @@ spring:
       ddl-auto: create
     show-sql: true
   config:
-    import: optional:configserver:http://lms-config-server:31000
+    import: optional:configserver:http://lms-config-server:5555
   security:
     oauth2:
       resourceserver:
