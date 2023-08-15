@@ -10,27 +10,27 @@
 //                sh 'mvn clean install'
 //                }
 //             }
-       stage('Database Connection') {
-                   steps {
-                       script {
-                       // Use Jenkins credentials to get the MySQL username and password
-                       withCredentials([usernamePassword(credentialsId: 'b6e6b90d-21c4-4057-b364-01f059b29056', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
-                           // Connect to the MySQL database and perform operations
-                           // Replace 'your_database_name', 'your_mysql_host', and 'your_table_name' with actual values
-                           def dbName = 'LMSATTENDANCESERVICE'
-                           def dbHost = 'localhost'  // If running on localhost, you can use 'localhost' or '127.0.0.1'
-                           def dbPort = '3306'  // Default MySQL port
-
-                           def query = "SELECT * FROM your_table_name;"
-                           def command = "mysql -u ${DB_USERNAME} -p${DB_PASSWORD} -h ${dbHost} -P ${dbPort} ${dbName} -e \"${query}\""
-
-                           // Execute the SQL query using the 'sh' step
-                           def result = sh(returnStdout: true, script: command).trim()
-                           echo "Query Result:\n${result}"
-                       }
-                   }
-               }
-             }
+//        stage('Database Connection') {
+//                    steps {
+//                        script {
+//                        // Use Jenkins credentials to get the MySQL username and password
+//                        withCredentials([usernamePassword(credentialsId: 'b6e6b90d-21c4-4057-b364-01f059b29056', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
+//                            // Connect to the MySQL database and perform operations
+//                            // Replace 'your_database_name', 'your_mysql_host', and 'your_table_name' with actual values
+//                            def dbName = 'LMSATTENDANCESERVICE'
+//                            def dbHost = 'localhost'  // If running on localhost, you can use 'localhost' or '127.0.0.1'
+//                            def dbPort = '3306'  // Default MySQL port
+//
+//                            def query = "SELECT * FROM your_table_name;"
+//                            def command = "mysql -u ${DB_USERNAME} -p${DB_PASSWORD} -h ${dbHost} -P ${dbPort} ${dbName} -e \"${query}\""
+//
+//                            // Execute the SQL query using the 'sh' step
+//                            def result = sh(returnStdout: true, script: command).trim()
+//                            echo "Query Result:\n${result}"
+//                        }
+//                    }
+//                }
+//              }
        stage('Build Docker Image') {
           steps {
             script {
