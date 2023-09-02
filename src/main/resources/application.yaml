@@ -1,10 +1,12 @@
 server:
   port: 8002
-  servlet:
-    context-path: /lms-attendance-service
+#  servlet:
+#    context-path: /lms-attendance-service
 spring:
   application:
     name: lms-attendance-service
+  profiles:
+    active: default
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/testdb
 #    username: root
