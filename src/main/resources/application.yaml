@@ -5,8 +5,8 @@ server:
 spring:
   application:
     name: lms-attendance-service
-  profiles:
-    active: default
+#  profiles:
+#    active: default
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/testdb
 #    username: root
