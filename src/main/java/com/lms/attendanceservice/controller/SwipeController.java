@@ -17,6 +17,10 @@ public class SwipeController {
     @Autowired
     private ISwipeService swipeService;
 
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+   public String test(){
+       return "Test";
+   }
     @RequestMapping(value = "/swipe", method = RequestMethod.POST)
     public ResponseEntity<Response<SwipeResponse>> swipe(@RequestParam("option") String swipeOption){
         log.info("Inside swipe controller");
