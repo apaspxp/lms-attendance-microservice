@@ -75,7 +75,7 @@
                     //Cleanup the resources
                     sh "kubectl delete -f lms-attendance-service-service.yaml --ignore-not-found"
                     //Apply the new manifest file
-                    sh "kubectl apply -f lms-attendance-service-service.yaml.yml"
+                    sh "kubectl apply -f lms-attendance-service-service.yaml"
                    }
                 }
             }
