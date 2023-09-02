@@ -18,7 +18,7 @@ public class SwipeController {
     private ISwipeService swipeService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-   public String test(){
+    public String test(){
        return "Test";
    }
     @RequestMapping(value = "/swipe", method = RequestMethod.POST)
