@@ -31,6 +31,13 @@
 //                    }
 //                }
 //              }
+       stage('Build and Package') {
+           steps {                 // Build your project and skip tests
+               script {
+                   sh "mvn clean package -DskipTests"
+               }
+           }
+       }
        stage('Build Docker Image') {
           steps {
             script {
