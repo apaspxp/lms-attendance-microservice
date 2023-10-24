@@ -36,7 +36,7 @@ spec:
       port: 8002
       protocol: TCP
       targetPort: 8002
-      nodePort: 33000
+      nodePort: 32100
   selector:
     app: lms-attendance-service
   type: NodePort
